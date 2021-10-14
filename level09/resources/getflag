@@ -1,0 +1,8 @@
+ssh level09@$SNOWCRASH_IP -p 4242 '
+	token=$(cat token)
+	for ((i = 0; i < ${#token}; i++)) ; do
+		ascii=$(echo -n "${token:$i:1}" | od -An -tuC)
+		printf "\x$(printf %x $(($ascii - $i)))"
+	done
+	echo
+'

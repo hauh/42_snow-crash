@@ -1,0 +1,5 @@
+ssh level08@$SNOWCRASH_IP -p 4242 '
+	if [ -f /tmp/link08 ] ; then rm /tmp/link08 ; fi
+	ln -s /home/user/level08/token /tmp/link08 &&
+	./level08 /tmp/link08
+'

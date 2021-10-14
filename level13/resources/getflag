@@ -1,0 +1,9 @@
+ssh level13@$SNOWCRASH_IP -p 4242 '
+	gdb ./level13 -batch \
+		-ex "disass main" \
+		-ex "break *0x0804859a" \
+		-ex run \
+		-ex "set \$eax = 4242" \
+		-ex continue \
+	| grep token
+'
